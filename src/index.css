@@ -1,6 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&family=Overpass:wght@400;700&display=swap");
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
 }
 
 body {
@@ -9,8 +21,70 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Very-Dark-Blue);
 }
 
+.card {
+  background: linear-gradient(hsl(213, 19%, 18%), hsl(216, 12%, 8%));
+  max-width: 360px;
+  height: 360px;
+  border-radius: 2rem;
+  box-shadow: rgba(53, 52, 52, 0.25) 3px 1px 8px;
+}
+.card-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.text h2 {
+  color: var(--White);
+  margin-bottom: 5px;
+}
+.text p {
+  color: var(--Light-Grey);
+}
+.select-items {
+  display: flex;
+  justify-content: space-between;
+}
+.item {
+  list-style-type: none;
+  display: flex;
+  background-color: var(--Dark-Blue);
+  width: 35px;
+  height: 35px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--Medium-Grey);
+  cursor: pointer;
+}
+.item:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: var(--White);
+}
+.btn {
+  background-color: hsl(25, 97%, 53%);
+  width: 300px;
+  height: 40px;
+  border-radius: 2rem;
+  text-align: center;
+  border: none;
+  color: var(--White);
+}
+.btn:hover {
+  background-color: var(--White);
+  color: hsl(25, 97%, 53%);
+}
+.selected {
+  background-color: var(--Light-Grey);
+  color: var(--White);
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

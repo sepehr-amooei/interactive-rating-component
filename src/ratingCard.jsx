@@ -5,7 +5,12 @@ class RatingCard extends Component {
   state = {
     currentRate: null,
   };
+  handleSelect = (rate) => {
+    const currentRate = rate;
+    this.setState({ currentRate });
+  };
   render() {
+    const { currentRate } = this.state;
     return (
       <div className="card">
         <div className="card-container">
@@ -19,17 +24,23 @@ class RatingCard extends Component {
               feedback is appreciated to help us improve our offering!
             </p>
           </section>
-          <section className="selector">
+          <section>
             <ul className="select-items">
               {_.range(1, 6).map((i) => (
-                <li key={i} className="item">
+                <li
+                  key={i}
+                  onClick={() => this.handleSelect(i)}
+                  className={i === currentRate ? "item selected" : "item"}
+                >
                   {i}
                 </li>
               ))}
             </ul>
           </section>
-          <section className="btn">
-            <button className="btn">SUBMIT</button>
+          <section>
+            <button className="btn">
+              <b>SUBMIT</b>
+            </button>
           </section>
         </div>
       </div>
