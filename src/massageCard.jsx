@@ -1,6 +1,9 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 const MassageCard = () => {
+  const params = useParams();
+  const { id } = params;
   return (
     <div className="card">
       <div className="card-container massage-card">
@@ -8,7 +11,7 @@ const MassageCard = () => {
           <img src="./images/illustration-thank-you.svg" alt="" />
         </section>
         <section>
-          <p className="resault">You selected 4 out of 5</p>
+          <p className="resault">You selected {id} out of 5</p>
         </section>
         <section className="text center-text">
           <h2>Thank you!</h2>

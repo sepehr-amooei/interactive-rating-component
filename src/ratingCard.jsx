@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import _ from "lodash";
+import { Link } from "react-router-dom";
 
 class RatingCard extends Component {
   state = {
@@ -38,9 +39,12 @@ class RatingCard extends Component {
             </ul>
           </section>
           <section>
-            <button className="btn">
-              <b>SUBMIT</b>
-            </button>
+            <Link
+              to={`/${currentRate}`}
+              className={currentRate ? "btn" : "btn disabled"}
+            >
+              SUBMIT
+            </Link>
           </section>
         </div>
       </div>

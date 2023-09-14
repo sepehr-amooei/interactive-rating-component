@@ -48,6 +48,19 @@ body {
   display: flex;
   align-items: center;
 }
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  background-color: hsl(213, 19%, 18%);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.text {
+  text-align: start;
+}
 .text h2 {
   color: var(--White);
   margin-bottom: 5px;
@@ -77,10 +90,13 @@ body {
 }
 .btn {
   background-color: hsl(25, 97%, 53%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 300px;
   height: 40px;
   border-radius: 2rem;
-  text-align: center;
+  text-decoration: none;
   border: none;
   color: var(--White);
 }
@@ -93,6 +109,9 @@ body {
   padding: 10px;
   border-radius: 2rem;
   color: hsl(25, 97%, 53%);
+}
+.disabled {
+  pointer-events: none;
 }
 .selected {
   background-color: var(--Light-Grey);
