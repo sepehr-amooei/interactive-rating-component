@@ -88,6 +88,12 @@ body {
   background-color: var(--White);
   color: hsl(25, 97%, 53%);
 }
+.resault {
+  background-color: var(--Dark-Blue);
+  padding: 10px;
+  border-radius: 2rem;
+  color: hsl(25, 97%, 53%);
+}
 .selected {
   background-color: var(--Light-Grey);
   color: var(--White);

@@ -8,7 +8,7 @@ const MassageCard = () => {
           <img src="./images/illustration-thank-you.svg" alt="" />
         </section>
         <section>
-          <p className="resault">you selected 4 out of 5</p>
+          <p className="resault">You selected 4 out of 5</p>
         </section>
         <section className="text center-text">
           <h2>Thank you!</h2>
